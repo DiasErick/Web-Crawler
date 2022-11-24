@@ -19,7 +19,7 @@ else:
 ###########################################################################################
 
 #Setting the amount and both currencies
-amount = "250.10" ; curr_ori = 'BRL' ; curr_to = "CAD"
+amount = "1" ; curr_ori = 'BRL' ; curr_to = "CAD"
 
 obj_xe = XeCrawler()
 result = obj_xe.search(amount, curr_ori, curr_to)
@@ -27,4 +27,4 @@ result = obj_xe.search(amount, curr_ori, curr_to)
 if result:  
   print("\nHere is your result of exchanging: \n" + amount + " " + curr_ori +" = " + result.split()[0] + " " + curr_to + "\n")  
 else:
-  print("We could't get your result from exchanging informations, lets try again?")
+  print("We could't get your result from exchanging information, lets try again?")
