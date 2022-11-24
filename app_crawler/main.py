@@ -1,7 +1,13 @@
 from cbc import getCbcInfo, getCbcInfoNews, getCbcInfoSports, getCbcInfoTelevision, getCbcInfoRadio, getCbcInfoMusic
 
-print("CBC News Headline: " + getCbcInfoNews() + "\n")
-print("CBC Sports Headline: " + getCbcInfoSports() + "\n")
-print("CBC Radio Headline: " + getCbcInfoRadio() + "\n")
-print("CBC Music Headline: " + getCbcInfoMusic() + "\n")
-print("CBC TV Headline: " + getCbcInfoTelevision()+ "\n")
+print("------------------------------------------")
+print("CBC News Headline:   " + getCbcInfoNews() )
+print("------------------------------------------")
+print("CBC Sports Headline: " + getCbcInfoSports())
+print("------------------------------------------")
+print("CBC Radio Headline:  " + getCbcInfoRadio())
+print("------------------------------------------")
+print("CBC Music Headline:  " + getCbcInfoMusic())
+print("------------------------------------------")
+print("CBC TV Headline:     " + getCbcInfoTelevision())
+print("------------------------------------------")
