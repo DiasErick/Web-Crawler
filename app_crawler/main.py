@@ -1,11 +1,11 @@
-from nasdaq import NasdaqCrawler
+from xe import XeCrawler
 from cbc import CbcCrawler
 
 #################################################################
 #Here I'm testing a web crawler to get headline from CBC web site
 #################################################################
 obj_cbc = CbcCrawler()
-option = "News" #Available options: Sports, News, Radio, Tv, Music
+option = "Sports" #Available options: Sports, News, Radio, Tv, Music
 result_cbc = obj_cbc.search(option)
 
 #Cheing if we got the result
@@ -21,8 +21,8 @@ else:
 #Setting the amount and both currencies
 amount = "250.10" ; curr_ori = 'BRL' ; curr_to = "CAD"
 
-obj_nasdaq = NasdaqCrawler()
-result = obj_nasdaq.search(amount, curr_ori, curr_to)
+obj_xe = XeCrawler()
+result = obj_xe.search(amount, curr_ori, curr_to)
 #Printing the result
 if result:  
   print("\nHere is your result of exchanging: \n" + amount + " " + curr_ori +" = " + result.split()[0] + " " + curr_to + "\n")  
