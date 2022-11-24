@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 
-class NasdaqCrawler(object):
+class XeCrawler(object):
     def __init__(self):
-        #Crawl EX results for exchanging
+        #Crawl XE results for exchanging
         
         super().__init__()
         
@@ -20,9 +20,9 @@ class NasdaqCrawler(object):
         return requests.get(url, headers=self.headers)
 
     def search(self, amount: str,currency_from: str, currency_to: str):
-        #Search Nasdaq
+        #Search the currency exchanging information
         
-        # Get response from EX, sengind the amount, origin currency and the desired currency
+        # Get response from XE web site, sengind the amount, origin currency and the desired currency
         response = self.__get_source('https://www.xe.com/currencyconverter/convert/?Amount= '+ amount + '&From=' + currency_from + '&To=' + currency_to)
         
         #Just checking if the result was successful
