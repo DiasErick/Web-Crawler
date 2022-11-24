@@ -22,6 +22,9 @@ class XeCrawler(object):
     def search(self, amount: str,currency_from: str, currency_to: str):
         #Search the currency exchanging information
         
+        if not amount or not currency_from or not currency_to:
+            return ""
+        
         # Get response from XE web site, sengind the amount, origin currency and the desired currency
         response = self.__get_source('https://www.xe.com/currencyconverter/convert/?Amount= '+ amount + '&From=' + currency_from + '&To=' + currency_to)
         
