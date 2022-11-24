@@ -23,6 +23,3 @@ def getCbcInfoMusic():
     
 def getCbcInfoTelevision():
     return getCbcInfo("https://www.cbc.ca/television", '[class^="headline"]')
-    
-
-    
